@@ -1,10 +1,6 @@
 # Linux over Windows
 # changes to check git push after forking the repo
 
-### Cost-Effectiveness
-- **Free and Open Source**: Linux does not require expensive licensing fees, making it a cost-effective choice for companies.
-- **Lower Maintenance Costs**: Linux is stable and requires minimal maintenance, reducing operational expenses.
-
 ### Performance and Efficiency
 - **Better Resource Utilization**: Linux is lightweight and consumes fewer system resources compared to Windows.
 - **High Scalability**: Linux efficiently scales from small embedded systems to enterprise data centers without performance degradation.
