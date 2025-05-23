@@ -1,8 +1,8 @@
 # Linux over Windows
-# changes to check git push after forking the repo
+# changing some piece of code to create conflict
 
 ### Performance and Efficiency
-- **Better Resource Utilization**: Linux is lightweight and consumes fewer system resources compared to Windows.
+- **Better Resource Utilization**: Linux is lightweightless.
 - **High Scalability**: Linux efficiently scales from small embedded systems to enterprise data centers without performance degradation.
 
 ### Security and Reliability
