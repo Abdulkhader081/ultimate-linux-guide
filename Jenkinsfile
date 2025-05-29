@@ -18,5 +18,19 @@ pipeline {
 	                }
 	            }
         	}
+		stage('Send Email') {
+            		steps {
+                		mail to: "${EMAIL_ID}",
+                     		subject: "Git Branch Report",
+                     		body: "Attached is the branch list report for the repository: ${REPO_URL}",
+                     		attachmentsPattern: "${REPORT_FILE}"
+            		}
+        	}
 	}
-	}
+	post {
+        	always {
+            		// Cleanup
+            		sh "rm -f ${REPORT_FILE}"
+        	}
+    	}
+}
