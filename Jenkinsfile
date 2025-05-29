@@ -3,9 +3,6 @@ node {
     def REPO_URL = params.gitURL
     def REPORT_FILE = 'branches.txt'
 
-    stage('Clone Repo') {
-        git url: "${REPO_URL}"
-    }
 
     stage('Fetch Remote Branches') {
         sh """
