@@ -13,7 +13,7 @@ pipeline {
 	                    sh """
 	                        echo "Branch List Report for ${REPO_URL}" > ${REPORT_FILE}
 	                        echo "----------------------------------------" >> ${REPORT_FILE}
-	                        git ls-remote --heads ${REPO_URL} | awk '{print $2}' | sed 's|refs/heads/||' >> ${REPORT_FILE}
+	                        git ls-remote --heads ${REPO_URL} | awk '{print \$2}' | sed 's|refs/heads/||' >> ${REPORT_FILE}
 	                    """
 	                }
 	            }
