@@ -5,11 +5,11 @@ pipeline {
     }
 
     stages {
-        stage('Clone Repository') {
+        /*stage('Clone Repository') {
             steps {
                 git url: "${REPO_URL}"
             }
-        }
+        }*/
 
         stage('List Files') {
             steps {
