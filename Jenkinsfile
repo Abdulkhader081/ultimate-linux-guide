@@ -1,23 +1,35 @@
 pipeline {
     agent any
-	environment {
-        REPO_URL = "https://github.com/Abdulkhader081/ultimate-linux-guide.git"
-    }
 
     stages {
-        /*stage('Clone Repository') {
+        stage('Build') {
             steps {
-                git url: "${REPO_URL}"
+                echo 'Building the project...'
+                sh 'echo "Compiling source code..."'
             }
-        }*/
+        }
 
-        stage('List Files') {
+        stage('Test') {
             steps {
-		    sh """
-                    pwd
-                    ls -lrt
-                    """
+                echo 'Running tests...'
+                sh 'echo "All tests passed!"'
             }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                sh 'echo "Application deployed successfully!"'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Please check the logs.'
         }
     }
 }
